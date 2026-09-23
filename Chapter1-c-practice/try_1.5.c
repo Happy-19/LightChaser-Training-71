@@ -3,7 +3,7 @@
 
 int main() {
     SetConsoleOutputCP(65001);
-    for (int i = 1; i <= 5;i++){
+    for (int i = 1; i <= 100;i++){
         if (i % 2 == 0)
             printf("%d是偶数\n",i);
         else
