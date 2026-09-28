@@ -4,7 +4,7 @@
 // 程序主入口
 int main() {
     // 输出内容
-    printf("Hello World!");
+    printf("Hello LightChaser!");
     // 输出结果正常与否的反馈
     return 0;
 }
