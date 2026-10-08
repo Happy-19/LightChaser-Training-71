@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(){
-    printf("ÖĞÎÄ²âÊÔ£¬ÄãºÃ£¡\n");
+    printf("Hello LightChaser!\n");
     return 0;
 }
