@@ -1,17 +1,17 @@
-mport os
+import os
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv()                       # read .env  Key
+load_dotenv()                      
 client = OpenAI(
     api_key=os.getenv("DEEPSEEK_API_KEY"),
-    base_url="https://api.deepseek.com",   # ¡ï ÕâÊÇ¹Ø¼ü£º»»³É DeepSeek µÄµØÖ·
+    base_url="https://api.deepseek.com",   
 )
 resp = client.chat.completions.create(
-    model="deepseek-chat",          # »ò deepseek-reasoner£¨ÍÆÀí°æ£©
+    model="deepseek-chat",         
     messages=[
-        {"role": "system", "content": "ÄãÊÇÒ»ÃûÄÍĞÄµÄ´óÒ»Öú½Ì"},
-        {"role": "user", "content": "ÓÃÈı¾ä»°½âÊÍÊ²Ã´ÊÇ±ßÔµ¼ì²â"},
+        {"role": "system", "content": "ä½ æ˜¯ä¸€åè€å¿ƒçš„å¤§ä¸€åŠ©æ•™"},
+        {"role": "user", "content": "ç”¨ä¸‰å¥è¯è§£é‡Šä»€ä¹ˆæ˜¯è¾¹ç¼˜æ£€æµ‹"},
     ],
 )
 print(resp.choices[0].message.content)
