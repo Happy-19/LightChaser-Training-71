@@ -18,3 +18,13 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+# STM32 build artifacts
+build/
+Objects/
+Listings/
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.axf
