@@ -1,30 +1,30 @@
-Ò»¡¢¹¤³ÌÅäÖÃ±Ê¼Ç£º
+ä¸€ã€å·¥ç¨‹é…ç½®ç¬”è®°ï¼š
 
-Ð¾Æ¬ÐÍºÅ£ºSTM32F103C8T6
+èŠ¯ç‰‡åž‹å·ï¼šSTM32F103C8T6
 
-ÏµÍ³Ê±ÖÓ£ºÅäÖÃÎª72MHz
+ç³»ç»Ÿæ—¶é’Ÿï¼šé…ç½®ä¸º72MHz
 
-¿ª·¢»·¾³£ºMakefile+ARM GCC+Vscode
+å¼€å‘çŽ¯å¢ƒï¼šMakefile+ARM GCC+Vscode
 
-ÉÕÂ¼¹¤¾ß£ºSTM32CubeProgrammer+ST-link
+çƒ§å½•å·¥å…·ï¼šSTM32CubeProgrammer+ST-link
 
-¶þ¡¢Òý½ÅÅäÖÃ£º
+äºŒã€å¼•è„šé…ç½®ï¼š
 
-PA7 -> GPIO_Output(ÍÆÍìÊä³ö) -> Çý¶¯LED³£ÁÁ
+PA7 -> GPIO_Output(æŽ¨æŒ½è¾“å‡º) -> é©±åŠ¨LEDå¸¸äº®
 
-PA13 -> SYS_JIMS-SWDIO -> ST-Linkµ÷ÊÔÊý¾ÝÏß
+PA13 -> SYS_JIMS-SWDIO -> ST-Linkè°ƒè¯•æ•°æ®çº¿
 
-PA14 -> SYS_JTCK-SWCLK -> ST-Linkµ÷ÊÔÊ±ÖÓÏß
+PA14 -> SYS_JTCK-SWCLK -> ST-Linkè°ƒè¯•æ—¶é’Ÿçº¿
 
-Èý¡¢±àÒëÓëÉÕÂ¼£º
+ä¸‰ã€ç¼–è¯‘ä¸Žçƒ§å½•ï¼š
 
-±àÒë£ºÖÕ¶ËÊäÈëmake
+ç¼–è¯‘ï¼šç»ˆç«¯è¾“å…¥make
 
-Á¬½ÓST-LinkÓë°å×Ó
+è¿žæŽ¥ST-Linkä¸Žæ¿å­
 
-ÉÕÂ¼£ºÖÕ¶ËÊäÈëmake flash
+çƒ§å½•ï¼šç»ˆç«¯è¾“å…¥make flash
 
-¹¤³ÌÅäÖÃºÍ×îÖÕÐ§¹ûÈçÏÂ
+å·¥ç¨‹é…ç½®å’Œæœ€ç»ˆæ•ˆæžœå¦‚ä¸‹
 
 ![alt text](01project.png)
 

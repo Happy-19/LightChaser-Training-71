@@ -95,15 +95,17 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // LED闪烁(500ms翻转)的代码实现
-    HAL_GPIO_WritePin(GPIOB,GPIO_PIN_8,SET);
-    HAL_Delay(500);
-    HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_8);
-    HAL_Delay(500);
+    // LED闪烁(500ms翻转)的代码实现（为了避免LED太繁杂，闪烁效果的呈现
+    // 需解除下列注释后将while里其他函数调用注释掉）
+    // HAL_GPIO_WritePin(GPIOB,GPIO_PIN_8,SET);
+    // HAL_Delay(500);
+    // HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_8);
+    // HAL_Delay(500);
 // 按下亮灭翻转+按下常亮的效果呈现
-if(Key_Nonblocking_Debounce_PA6()==1){
+if(Key_Nonblocking_Debounce_PA6()==0){
   HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,SET);
 }
+else{HAL_GPIO_WritePin(GPIOB,GPIO_PIN_6,RESET);}
 if(Key_Nonblocking_Debounce_PB0()==1){
   HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_4);
 }
@@ -155,29 +157,26 @@ void SystemClock_Config(void)
 
 /* USER CODE BEGIN 4 */
 // 软件消抖代码实现,返回1时引脚状态才会改变
-uint8_t Key_Nonblocking_Debounce_PA6(){
-uint32_t last_time=0;
+uint8_t Key_Nonblocking_Debounce_PA6(void){
+static uint32_t last_time=0;
 // 对于上拉输入，定1为按键松开状态,0为按键按下状态
-uint8_t last_state=1; 
+static uint8_t last_state=1; 
 uint32_t current_time=HAL_GetTick();
 uint8_t current_state=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_6);
 if(last_state!=current_state){
   if(current_time-last_time>20){
     last_state=current_state;
     last_time=current_time;
-    if(last_state==0){
-      return 1;
-    }
   }
 }
-else{last_time=current_time;}
-return 0;
+else{last_time=current_time;return current_state;}
+return last_state;
 }
 
-uint8_t Key_Nonblocking_Debounce_PB0(){
-uint32_t last_time=0;
+uint8_t Key_Nonblocking_Debounce_PB0(void){
+static uint32_t last_time=0;
 // 对于上拉输入，定1为按键松开状态,0为按键按下状态
-uint8_t last_state=1; 
+static uint8_t last_state=1; 
 uint32_t current_time=HAL_GetTick();
 uint8_t current_state=HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_0);
 if(last_state!=current_state){
