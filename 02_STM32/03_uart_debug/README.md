@@ -34,8 +34,5 @@ PA9 -> USART1_TX -> 单片机发送端
 时钟配置如下
 ![alt text](03_clock.png)
 
-单片机发送如下
-
-打印结果如下
-
-回显见附件
+单片机发送、打印和回显的演示见附件
+https://github.com/Happy-19/LightChaser-Training-71/releases/download/v1.0/03_uart_debug_.mp4
