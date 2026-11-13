@@ -10,11 +10,13 @@
 
 二、引脚配置：
 
-PA7 -> GPIO_Output(推挽输出) -> 驱动LED常亮
-
 PA13 -> SYS_JIMS-SWDIO -> ST-Link调试数据线
 
 PA14 -> SYS_JTCK-SWCLK -> ST-Link调试时钟线
+
+PA7 -> GPIO_Output(推挽输出) -> 驱动LED常亮
+
+其余引脚不接线不列出
 
 三、编译与烧录：
 
